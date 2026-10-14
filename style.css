@@ -1874,8 +1874,6 @@ a .btn_check {
 }
 
 
-}
-
 @media screen and (max-width:460px){
 
 input,
@@ -1927,6 +1925,22 @@ a:hover .btn_check i {
 
 ul.works_list li {
 	width: 98%;
+}
+
+.column-head{
+	width:100%; 
+}
+
+.contact-column{
+	width :100%;	
+}
+
+.column-flex{
+	width: 100%;
+}
+
+.contact-column{
+	max-width: 100%;
 }
 
 }
