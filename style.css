@@ -440,6 +440,40 @@ header .h_tel a i {
 	margin: 0px;
 }
 
+.content-column{
+	max-width:1200px; 
+	margin:0 auto;
+}
+
+.column-flex{
+
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	min-width: 60%;
+}
+
+.column-head{
+	width:20%; 
+	display: flex; 
+	flex-wrap: wrap; 
+	align-items: center;
+}
+
+.contact-column{
+	width :41%;
+	text-align: center;
+	padding:20px;
+	transition: transform 0.3s ease;  	
+}
+
+.contact-column:hover{
+	background-color: #f7f7f5;
+	border-radius: 12px;
+	transform: scale(1.05); 
+
+}
+
 /*-----トップへ戻るボタン------*/
 
 .to_top {
@@ -851,7 +885,8 @@ height: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: absolute;
-	bottom: -50px;
+	/*bottom: -50px;*/
+	bottom:  -90px;
 	left: 50%;
 	margin-left: -50px;
 	z-index: 80;
@@ -1820,6 +1855,22 @@ ul.works_list li {
 a .btn_check {
 	width: 80%;
 	margin-left: -40%;
+}
+
+.column-head{
+	width:100%; 
+}
+
+.contact-column{
+	width :100%;	
+}
+
+.column-flex{
+	width: 100%;
+}
+}
+.contact-column{
+	max-width: 100%;
 }
 
 
