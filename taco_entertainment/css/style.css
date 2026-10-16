@@ -1904,6 +1904,11 @@ a .btn_check {
 	margin-left: -40%;
 }
 
+
+#index_company h2, #index_company p {
+	text-align: left;
+}
+
 .column-head{
 	width:100%; 
 }
