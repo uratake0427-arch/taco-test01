@@ -269,6 +269,36 @@ header .h_tel a i {
 	font-size: 14px;
 }
 
+#index_company{
+	background-color: #0c0c0c !important;
+}
+
+#index_company h2, #index_company p{
+	text-align: center;
+	color: #fff;
+}
+
+#index_company a{
+	background-color: #0c0c0c; 
+	margin-right: 0; 
+	display: inline-block; 
+	padding: 12px 30px; 
+	border: 1px solid #fff; 
+	border-radius: 50px; 
+	text-decoration:none; 
+	color: #fff;
+
+}
+#index_company a span::before{
+	content: "　";
+}
+
+#index_company a:hover{
+	background-color: #fff;
+	border: 1px solid #0c0c0c;
+	color:#292929;
+}
+
 .content h2 {
 	/*font-size: 28px;*/
 	font-size: 3rem;
@@ -352,7 +382,7 @@ header .h_tel a i {
 .content p {
 	font-size: 16px;
 	line-height: 1.8;
-	padding: 10px;
+	/*padding: 10px;*/
 	margin-bottom: 30px;
 	margin-top: 20px;
 	margin-right: 30px;
@@ -461,18 +491,19 @@ header .h_tel a i {
 }
 
 .contact-column{
-	width :41%;
+	width :100%;
 	text-align: center;
-	padding:20px;
-	transition: transform 0.3s ease;  	
+	
+	transition: transform 0.3s ease;
+	border-radius: 12px;
 }
 
 .contact-column:hover{
-	background-color: #f7f7f5;
-	border-radius: 12px;
 	transform: scale(1.05); 
 
 }
+
+
 
 /*-----トップへ戻るボタン------*/
 
@@ -1121,6 +1152,12 @@ ul.works_list li a:hover {
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
 	border: 1px solid #000;
 	color: #000;
+}
+
+video{
+	width: 80%;
+	margin:50px auto;
+	display: block;
 }
 
 
