@@ -273,9 +273,16 @@ header .h_tel a i {
 	background-color: #0c0c0c !important;
 }
 
-#index_company h2, #index_company p{
+#index_company .index-conmpany-content h2, #index_company .index-conmpany-content p{
 	text-align: center;
+	line-height: normal;
 	color: #fff;
+}
+
+#index_company .index-conmpany-content h2 span{
+	font-size: 3rem;
+	color: #fff;
+	font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "Sawarabi Mincho", "HG明朝E",  "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 #index_company a{
@@ -1170,7 +1177,12 @@ video{
 	display: block;
 }
 
-
+@media screen and (min-width:460px) {
+	#index_company .index-conmpany-content_mobile{
+		display: none;
+	}
+	
+}
 
 @media screen and (min-width:960px){
 body {
@@ -1800,6 +1812,10 @@ footer .f_bn li a {
 	display: none;
 }
 
+#index_company .index-conmpany-content h2 span{
+	display: block;
+}
+
 }
 
 @media screen and (max-width:640px){
@@ -1920,9 +1936,12 @@ a .btn_check {
 .column-flex{
 	width: 100%;
 }
-}
+
 .contact-column{
 	max-width: 100%;
+}
+
+
 }
 
 
@@ -1995,6 +2014,28 @@ ul.works_list li {
 	max-width: 100%;
 }
 
+
+#index_company .index-conmpany-content{
+	display:none;
+}
+
+#index_company .index-conmpany-content_mobile{
+	display: block;
+}
+
+#index_company .index-conmpany-content_mobile h2, #index_company .index-conmpany-content_mobile p{
+	color: #fff;
+	text-align: left;
+	word-break: break-all;
+	line-height: normal;
+}
+
+#index_company .index-conmpany-content_mobile h2 span{
+	display: block;
+	font-size: 24px;
+	color: #fff;
+	font-family: "ラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", "YuMincho", "Sawarabi Mincho", "HG明朝E",  "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
 }
 
 /*
