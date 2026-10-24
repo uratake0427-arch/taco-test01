@@ -132,7 +132,16 @@ header .h_btn a:hover {
 	background-color: #333;
 	border: 1px solid #FFF;
 }
-header .h_tel a {
+/*header .h_tel a {
+	display: block;
+	text-align: center;
+	position: absolute;
+	text-decoration: none;
+	color: #333;
+	letter-spacing: 1px;
+}*/
+
+header .h_line a{
 	display: block;
 	text-align: center;
 	position: absolute;
@@ -140,8 +149,16 @@ header .h_tel a {
 	color: #333;
 	letter-spacing: 1px;
 }
+
+header .h_line a img{
+	max-width: 150px;
+	max-height:40px;
+}
+
+
 header .h_btn a i,
-header .h_tel a i {
+header .h_tel a i,
+header .h_line a i {
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -205,7 +222,7 @@ header .h_tel a i {
 	width: 100%;
 	background-color: #FFF;
 	/*padding-top: 50px;*/
-	padding: 50px 0;
+	padding: 100px 0;
 }
 .cont_wrap {
 	max-width: 1200px;
@@ -500,7 +517,7 @@ header .h_tel a i {
 	align-items: center;
 }
 
-.contact-column{
+.contact-column, .audition-column{
 	width :100%;
 	text-align: center;
 	
@@ -509,17 +526,17 @@ header .h_tel a i {
 }
 
 
-.contact-column a img{
-	max-width: 100%; 
+.contact-column a img, .audition-column a img {
+	max-width: 90%; 
 	border-radius: 12px;
 }
 
-.contact-column a img:hover{
+.contact-column a img:hover, .audition-column a img:hover{
 	transform: scale(1.05); 
 
 }
 
-.contact-column-mobile{
+.contact-column-mobile, .audition-column-mobile{
 	display: none;
 }
 
@@ -1132,7 +1149,7 @@ a:hover .btn_check i {
 /*
 実績一覧
 -------------------------------------------*/
-ul.works_list {
+ul.works_list, ul.event_list, ul.creators_list {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -1161,7 +1178,15 @@ ul.works_list {
 	justify-content: normal;
 }
 
-ul.works_list li {
+ul.works_list li, ul.event_list li{
+	width: 30%;
+	position: relative;
+	text-align: center;
+	/*margin-bottom: 30px;*/
+	margin: 0 15px 30px 15px;
+}
+
+ul.creators_list li {
 	width: 21%;
 	position: relative;
 	text-align: center;
@@ -1169,7 +1194,7 @@ ul.works_list li {
 	margin: 0 15px 30px 15px;
 }
 
-ul.works_list li a {
+ul.works_list li a, ul.event_list li a, ul.creators_list li a {
 	display: block;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
@@ -1183,10 +1208,21 @@ ul.works_list li a {
 	border-radius: 12px;
 }
 
-ul.works_list li a img {
+ul.works_list li a img, ul.event_list li a img{
 	width: auto;
 	max-width: 100%;
-	aspect-ratio: 1/1;
+	aspect-ratio: 16 / 9;
+	border-radius: 12px;
+	object-fit: cover;
+	 object-position: center top; 
+	transition: transform 0.3s ease; 
+	max-height: 300px;
+}
+
+ul.creators_list li a img{
+	width: auto;
+	max-width: 100%;
+	aspect-ratio: 1 / 1;
 	border-radius: 12px;
 	object-fit: cover;
 	 object-position: center top; 
@@ -1200,7 +1236,7 @@ ul.works_list li a img {
 	filter: alpha(opacity=90);
 	-ms-filter: "alpha( opacity=90 )";*/
 
-ul.works_list li a:hover img {
+ul.works_list li a:hover img, ul.creators_list li a:hover img, ul.event_list li a:hover img{
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   opacity: 1.0;
@@ -1209,7 +1245,7 @@ ul.works_list li a:hover img {
 	transform: scale(1.1);
 }
 
-ul.works_list li a span {
+ul.works_list li a span, ul.event_list li a span, ul.creators_list li a span {
 	display: block;
 	padding-top: 10px;
 	/*font-size: 12px;*/
@@ -1217,7 +1253,7 @@ ul.works_list li a span {
 	letter-spacing: 1px;
 }
 
-ul.works_list li a:hover {
+ul.works_list li a:hover, ul.event_list li a:hover, ul.creators_list li a:hover  {
 	/*box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
@@ -1234,6 +1270,13 @@ video{
 
 @media screen and (min-width:460px) {
 	#index_company .index-conmpany-content_mobile{
+		display: none;
+	}
+	
+}
+
+@media screen and (min-width:640px) {
+	 header .h_line a i {
 		display: none;
 	}
 	
@@ -1287,6 +1330,16 @@ header .h_tel a {
 header .h_tel a strong {
 	font-size: 18px;
 }
+
+header .h_line a {
+	width: 180px;
+	top: 15px;
+	right: 180px;
+	line-height: 38px;
+	padding-top: 2px;
+	font-size: 14px;
+}
+
 header.fixed {
 	height: 100px;
 }
@@ -1535,6 +1588,12 @@ header .h_tel a {
 	right: 50%;
 	margin-right: -400px;
 }
+
+header .h_line a {
+	right: 50%;
+	margin-right: -400px;
+}
+
 header h1 a img {
 	left:50%;
 	margin-left: -600px;
@@ -1561,7 +1620,7 @@ img {
 }
 
 #top_catch img{
-	max-width: 80%;
+	max-width: 40%;
 	height:auto;
 }
 
@@ -1574,7 +1633,7 @@ img {
 	margin-left: 10px;
 }
 
-ul.works_list li {
+ul.works_list li, ul.event_list li, ul.creators_list li {
 	width: 31%;
 }
 
@@ -1807,7 +1866,7 @@ header .h_btn a {
 	padding-top: 1px;
 	font-size: 12px;
 }
-header .h_tel a {
+header .h_tel a  {
 	width: 120px;
 	top: 10px;
 	right: 180px;
@@ -1815,6 +1874,17 @@ header .h_tel a {
 	padding-top: 1px;
 	font-size: 12px;
 }
+
+ header .h_line a {
+	width: 120px;
+	top: 10px;
+	right: 220px;
+	line-height: 29px;
+	padding-top: 1px;
+	font-size: 12px;
+}
+
+
 header .h_menu {
 	display: none;
 }
@@ -1880,19 +1950,32 @@ header h1 a img {
 	height: 30px;
 }
 
+#top_catch img{
+	max-width: 60%;
+	height:auto;
+}
+
 header .h_btn a {
 	width: 50px;
 	font-size: 18px;
 	border-top-style: none;
 	border-bottom-style: none;
 }
-header .h_tel a {
+header .h_tel a, header .h_tel a i {
 	width: 50px;
 	font-size: 18px;
 	right: 100px;
 }
+
+header .h_line a, header .h_line a i {
+	width: 80px;
+	right: 100px;
+	
+}
+
 header .h_tel a span,
-header .h_btn a span {
+header .h_btn a span,
+header .h_line a img {
 	display: none;
 }
 
@@ -1919,8 +2002,8 @@ header .h_btn a span {
 }
 
 #sub_top {
-	height: 150px;
-	line-height: 150px;
+	/*height: 150px;
+	line-height: 150px;*/
 	padding-top: 50px;
 	background-position: center 50px;
 }
@@ -1937,7 +2020,7 @@ header .h_btn a span {
 	margin-left: 10px;
 }
 
-ul.works_list li {
+ul.works_list li, ul.event_list li, ul.creators_list li {
 	width: 47%;
 }
 
@@ -1984,18 +2067,18 @@ a .btn_check {
 	width:100%; 
 }
 
-.contact-column{
+.contact-column, .audition-column{
 	display: none;
 }
 
-.contact-column-mobile{
+.contact-column-mobile, .audition-column-mobile{
 	display:block;
 	max-width: 100%;
 	margin: 10px auto;	    
 	padding:30px 0;
 }
 
-.contact-column-mobile .contact-box{
+.contact-column-mobile .contact-box, .audition-column-mobile .audition-box{
 	max-width:90%;
 	margin: 0 auto;
 	border-radius: 12px;
@@ -2015,22 +2098,34 @@ a .btn_check {
 	z-index: 0; 
 }
 
-.contact-column-mobile .contact-box h2{
+.audition-column-mobile .audition-box::before{
+	content: "";
+	position: absolute;
+  		top: 0; left: 0; right: 0; bottom: 0;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url("../img/banner-audition.png");
+	background-size: cover;
+	background-position: right;
+	opacity: 0.2; 
+	z-index: 0; 
+}
+
+
+.contact-column-mobile .contact-box h2, .audition-column-mobile .audition-box h2{
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 	font-weight: bold; 
 	text-align: center;
 }
 
-.contact-column-mobile .contact-box p{
+.contact-column-mobile .contact-box p, .audition-column-mobile .audition-box p{
 	font-size:2rem; 
 	text-align:center;
 }
 
-.contact-column-mobile .contact-box .contact-button{
+.contact-column-mobile .contact-box .contact-button, .audition-column-mobile .audition-box .audition-button{
 	margin:10px auto;
 }
 
-.contact-column-mobile .contact-box .contact-button a{
+.contact-column-mobile .contact-box .contact-button a, .audition-column-mobile .audition-box .audition-button a{
 	display: block;
 	padding:0 5px;
 	margin:0 auto;
@@ -2081,6 +2176,11 @@ textarea {
 	max-width: 300px !important;
 }
 
+#top_catch img{
+	max-width: 80%;
+	height:auto;
+}
+
 .content table.table_01 th,
 .content table.table_01 td {
 	width: 100% !important;
@@ -2123,7 +2223,7 @@ a:hover .btn_check i {
 	padding-left: 5px;
 }
 
-ul.works_list li {
+ul.works_list li, ul.event_list li,  ul.creators_list li {
 	width: 98%;
 }
 
@@ -2135,7 +2235,7 @@ ul.works_list li {
 	width: 100%;
 }
 
-.contact-column{
+.contact-column, .audition-column{
 	max-width: 100%;
 }
 
