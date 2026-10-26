@@ -406,6 +406,10 @@ header .h_line a span {
 	margin-left: 30px;
 }
 
+.content h5 {
+	font-size: 18px;
+}
+
 .content p {
 	font-size: 16px;
 	line-height: 1.8;
@@ -1268,6 +1272,27 @@ video{
 	display: block;
 }
 
+/*
+オーディション問い合わせ
+-------------------------------------------*/
+.audition-flexbox{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 3%;
+}
+
+.audition-content{
+	width:25%;
+	background-color: #f6f6f6;
+	border-radius: 12px;
+	padding: 0 3%;
+}
+
+.audition-form{
+	width:65%;
+}
+
 @media screen and (min-width:460px) {
 	#index_company .index-conmpany-content_mobile{
 		display: none;
@@ -1941,6 +1966,16 @@ footer .f_bn li a {
 	display: block;
 }
 
+
+/*
+オーディション問い合わせ
+-------------------------------------------*/
+
+.audition-content, .audition-form{
+	width:100%;
+}
+
+
 }
 
 @media screen and (max-width:640px){
@@ -2152,6 +2187,7 @@ a .btn_check {
 
 .column-flex{
 	width: 100%;}
+
 
 
 /*
