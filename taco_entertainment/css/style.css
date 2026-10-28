@@ -78,7 +78,7 @@ a {
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
 	transition: 0.2s linear;
-	padding:3px;
+	/*padding:3px;*/
 }
 
 a:hover {
