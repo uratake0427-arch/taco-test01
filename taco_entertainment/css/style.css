@@ -443,7 +443,8 @@ header .h_line a span {
 	font-size: 20px;
 	color: #FFF;
 	text-align: center;
-	border: 5px solid #F6F6F6;
+	/*border: 5px solid #F6F6F6;*/
+	border: 1px solid #F6F6F6;
 	text-decoration: none;
 	display: block;
 	width: 88%;
@@ -453,9 +454,12 @@ header .h_line a span {
 	margin-bottom: 30px;
 	margin-left: auto;
 	line-height: 30px;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
+	/*border-radius: 10px;*/
+	border-radius: 50px;
+	/*-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;*/
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: relative;
